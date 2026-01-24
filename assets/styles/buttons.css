@@ -1,0 +1,85 @@
+.buttons {
+gap: 1rem;
+}
+
+.button {
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+
+    justify-content: center;
+    align-items: center;
+
+    font: var(--button);
+    color: var(--text-title);
+    border-radius: 8px;
+    padding-inline: 20px;
+
+    position: relative;
+    z-index: 1;
+
+    transition: color 0.4s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150%;
+      height: 300%;
+      border-radius: 50%;
+
+      /* Inicia o círculo no centro e invisível */
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.5s ease;
+      z-index: -1;
+    }
+
+    /* Efeito hover para expandir */
+    &:hover::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+    .btn-navbar {
+    width: 89px;
+    background-color: var(--pink-dark);
+
+    &::before {
+      background-color: var(--pink-base);
+    }
+  }
+
+  .monthly {
+    width: 208px;
+    background-color: var(--blue-dark);
+
+    &::before {
+      background-color: var(--blue-base);
+    }
+  }
+
+  .semiannual {
+    width: 208px;
+    background-color: var(--pink-dark);
+
+    &::before {
+      background-color: var(--pink-base);
+    }
+  }
+
+  .annual {
+    width: 208px;
+    background-color: var(--blue-dark);
+
+    &::before {
+      background-color: var(--blue-base);
+    }
+  }
+
+@media (width >= 80em) {
+  .button:not(.btn-navbar) {
+    width: 224px;
+  }
+}
