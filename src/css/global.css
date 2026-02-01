@@ -1,0 +1,69 @@
+:root {
+  --pink-light: #c59dd2;
+  --pink-base: #9547a5;
+  --pink-dark: #7d298a;
+  --pink-low: #3f0f41;
+
+  --blue-light: #73b6d2;
+  --blue-base: #358bb9;
+  --blue-mid: #2374a4;
+  --blue-dark: #144a72;
+  --blue-low: #08233c;
+
+  --shape-stroke: #002347;
+  --shape-hover: #001933;
+  --shape-base: #000f1f;
+  --shape-background: #00050a;
+
+  --text-title: #f8fbfb;
+  --text-body: #e2e7e9;
+  --text-label: #bac6c9;
+
+  --font-family: "Raleway", sans-serif;
+
+  --fs-title-lg: clamp(1.75rem, 5vw + 1rem, 3rem);
+  --fs-title-md: clamp(2rem, 4vw + 1rem, 2.5rem);
+  --fs-title-sm: clamp(1.6rem, 3vw + 1rem, 2rem);
+  --fs-title-xs: clamp(0.9rem, 1vw + 0.8rem, 1rem);
+  --fs-subtitle: clamp(1.6rem, 3vw + 1rem, 2rem);
+  --fs-body-lg: clamp(1rem, 2vw + 0.8rem, 1.25rem);
+  --fs-body-md: clamp(0.95rem, 0.5vw + 0.9rem, 1rem);
+  --fs-body-sm: clamp(0.8rem, 0.5vw + 0.75rem, 0.875rem);
+  --fs-body-xs: clamp(0.7rem, 0.3vw + 0.65rem, 0.75rem);
+  --fs-button: clamp(0.8rem, 0.5vw + 0.75rem, 0.875rem);
+  --fs-link: clamp(0.8rem, 0.5vw + 0.75rem, 0.875rem);
+  --fs-tag: clamp(0.55rem, 0.2vw + 0.55rem, 0.625rem);
+
+  --lh-body: 1.4;
+  --lh-subtitle: 2;
+
+  --weight-bold: 700;
+  --weight-medium: 500;
+  --weight-regular: 400;
+
+  --title-lg: var(--weight-bold) var(--fs-title-lg)/normal var(--font-family);
+  --title-md: var(--weight-bold) var(--fs-title-md)/normal var(--font-family);
+  --title-sm: var(--weight-bold) var(--fs-title-sm)/normal var(--font-family);
+  --title-xs: var(--weight-bold) var(--fs-title-xs)/normal var(--font-family);
+  --subtitle: var(--weight-medium) var(--fs-subtitle)/var(--lh-subtitle) var(--font-family);
+  --body-lg: var(--weight-regular) var(--fs-body-lg)/var(--lh-body) var(--font-family);
+  --body-md: var(--weight-regular) var(--fs-body-md)/var(--lh-body) var(--font-family);
+  --body-sm: var(--weight-regular) var(--fs-body-sm)/var(--lh-body) var(--font-family);
+  --body-xs: var(--weight-regular) var(--fs-body-xs)/var(--lh-body) var(--font-family);
+  --button: var(--weight-bold) var(--fs-button)/normal var(--font-family);
+  --link: var(--weight-medium) var(--fs-link)/normal var(--font-family);
+}
+
+body {
+  font: var(--body-md);
+  color: var(--text-body);
+  background-color: black;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}

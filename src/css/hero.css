@@ -1,0 +1,143 @@
+.hero-background-color {
+  background-color: #0b030c;
+  padding-bottom: 1px;
+  position: relative;
+  overflow: hidden;
+
+  background-image:
+    radial-gradient(circle at 50% -20%, rgba(63, 15, 65, 0.6), transparent 80%),
+    linear-gradient(to bottom, transparent 50%, #000000 100%);
+}
+
+.hero-background-color::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(at center, transparent, var(--black-base) 90%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-background {
+  background: url(../../assets/img/bg-hero.svg) no-repeat center top;
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 375 / 464;
+
+  display: flow-root; /* Fixes margin collapse from child elements */
+
+  position: relative;
+  z-index: 1;
+}
+
+.hero-background .description {
+  display: grid;
+  gap: 16px;
+  text-align: center;
+  margin: 48px auto 193px auto;
+  max-width: 335px;
+}
+
+.hero-content h1 {
+  font: var(--title-sm);
+  line-height: 100%;
+  margin-bottom: 8px;
+}
+
+.hero-content h2 {
+  font: var(--fs-body-sm);
+  max-width: 100%;
+  line-height: 120%;
+}
+
+.subtitle-body {
+  margin: 120px auto;
+  max-width: 335px;
+  font-weight: var(--weight-medium);
+  text-align: center;
+}
+
+/* Floating Elements Positioning */
+.blue-book {
+  top: -58px;
+  left: 230px;
+  height: 55px;
+  width: 55px;
+}
+
+.planchette {
+  top: 78px;
+  left: -15px;
+  height: 45px;
+  width: 45px;
+  transform: rotate(232deg);
+}
+
+.crystal-ball {
+  width: 90px;
+  height: 90px;
+  top: 125px;
+  right: -60px;
+}
+
+@media (width >= 80em) {
+  .container {
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+
+  .hero-background {
+    height: auto;
+    aspect-ratio: 1440 / 948; /* Maintains SVG native proportions on large screens */
+    min-height: 948px;
+    background-position: center;
+    background-size: 100% auto;
+  }
+
+  .hero-background .description {
+    max-width: 656px;
+    gap: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    margin-bottom: 300px;
+  }
+
+  .hero-content h1 {
+    font: var(--title-lg);
+    width: 650px;
+    margin-inline: auto;
+  }
+
+  .hero-content h2 {
+    font: var(--body-lg);
+    width: 500px;
+    margin-inline: auto;
+  }
+
+  .blue-book {
+    top: -100px;
+    left: 560px;
+    height: 110px;
+    width: 110px;
+  }
+
+  .planchette {
+    top: 130px;
+    left: -30px;
+    height: 100px;
+    width: 100px;
+    transform: rotate(0deg);
+  }
+
+  .subtitle-body {
+    font: var(--subtitle);
+    margin: 300px auto;
+    max-width: 1240px;
+    text-align: center;
+
+    & span {
+      color: var(--blue-light);
+    }
+  }
+}

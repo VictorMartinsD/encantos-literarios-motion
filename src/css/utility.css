@@ -1,0 +1,44 @@
+.tag {
+  font: var(--weight-bold) var(--fs-tag)/normal var(--font-family);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.container {
+  padding-inline: 20px;
+  width: 100%;
+}
+
+.mobile-only {
+  display: initial;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (width >= 80em) {
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: initial;
+  }
+}
