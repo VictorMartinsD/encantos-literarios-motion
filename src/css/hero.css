@@ -28,6 +28,8 @@
 
   position: relative;
   z-index: 1;
+
+  animation: fadeIn 1s ease-in-out 0.8s backwards;
 }
 
 .hero-background .description {
@@ -42,12 +44,14 @@
   font: var(--title-sm);
   line-height: 100%;
   margin-bottom: 8px;
+  animation: fadeIn 1.2s ease-in-out forwards;
 }
 
 .hero-content h2 {
   font: var(--fs-body-sm);
   max-width: 100%;
   line-height: 120%;
+  animation: fadeIn 1.4s ease-in-out 0.4s backwards;
 }
 
 .subtitle-body {
@@ -135,9 +139,115 @@
     margin: 300px auto;
     max-width: 1240px;
     text-align: center;
+  }
 
-    & span {
-      color: var(--blue-light);
-    }
+  .text-group {
+    color: rgba(255, 255, 255, 0.2);
+    transition: color 0.5s ease-in-out;
+  }
+
+  .text-group .highlight {
+    display: inline-block;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.2);
+    transition: color 0.5s ease-in-out;
+  }
+
+  .blue-book,
+  .planchette,
+  .crystal-ball {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .blue-book {
+    scale: 0;
+    transition:
+      opacity 0.5s ease-in-out,
+      scale 0.5s ease-in-out;
+  }
+
+  .planchette,
+  .crystal-ball {
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .external-content {
+    padding: 1px 0;
+  }
+
+  .blue-book,
+  .planchette,
+  .crystal-ball {
+    opacity: 0;
+    scale: 0;
+    transform: rotate(0deg);
+    pointer-events: none;
+    position: absolute;
+
+    transition:
+      opacity 0.5s ease-in-out,
+      scale 0.5s ease-out,
+      transform 0.5s ease-out;
+    transition-delay: 0s;
+  }
+
+  .planchette {
+    transform: rotate(0deg);
+  }
+  .crystal-ball {
+    transform: rotate(0deg);
+  }
+  .blue-book {
+    transform: rotate(0deg);
+  }
+
+  .external-content:hover .blue-book,
+  .external-content:hover .planchette,
+  .external-content:hover .crystal-ball {
+    opacity: 1;
+    scale: 1;
+    pointer-events: all;
+  }
+
+  .external-content:hover .blue-book {
+    transition-delay: 0s;
+  }
+  .external-content:hover .planchette {
+    transition-delay: 0.5s;
+  }
+  .external-content:hover .crystal-ball {
+    transition-delay: 1s;
+  }
+
+  .external-content:hover .text-group:nth-of-type(1),
+  .external-content:hover .text-group:nth-of-type(1) .highlight {
+    transition-delay: 0s;
+  }
+
+  .external-content:hover .text-group:nth-of-type(2),
+  .external-content:hover .text-group:nth-of-type(2) .highlight {
+    transition-delay: 0.5s;
+  }
+
+  .external-content:hover .text-group:nth-of-type(3),
+  .external-content:hover .text-group:nth-of-type(3) .highlight {
+    transition-delay: 1s;
+  }
+
+  .external-content:hover .text-group {
+    color: #fff;
+  }
+  .external-content:hover .text-group .highlight {
+    color: var(--blue-light);
+  }
+
+  .blue-book:hover,
+  .planchette:hover,
+  .crystal-ball:hover {
+    transform: rotate(15deg) !important;
+    scale: 1.1 !important;
+    transition-delay: 0s !important;
+    z-index: 10;
   }
 }
