@@ -1,12 +1,11 @@
 .hero-background-color {
   background-color: #0b030c;
-  padding-bottom: 1px;
   position: relative;
   overflow: hidden;
 
   background-image:
     radial-gradient(circle at 50% -20%, rgba(63, 15, 65, 0.6), transparent 80%),
-    linear-gradient(to bottom, transparent 50%, #000000 100%);
+    linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 0.8) 80%, #000 100%);
 }
 
 .hero-background-color::before {
@@ -22,8 +21,6 @@
   background: url(../../assets/img/bg-hero.svg) no-repeat center top;
   background-size: cover;
   width: 100%;
-  aspect-ratio: 375 / 464;
-
   display: flow-root; /* Fixes margin collapse from child elements */
 
   position: relative;
@@ -136,7 +133,7 @@
 
   .subtitle-body {
     font: var(--subtitle);
-    margin: 300px auto;
+    margin: 150px 120px 80px 120px;
     max-width: 1240px;
     text-align: center;
   }
@@ -170,10 +167,6 @@
   .planchette,
   .crystal-ball {
     transition: opacity 0.5s ease-in-out;
-  }
-
-  .external-content {
-    padding: 1px 0;
   }
 
   .blue-book,

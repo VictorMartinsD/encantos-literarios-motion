@@ -1,0 +1,227 @@
+.monthly-kit {
+  background-image: radial-gradient(
+    circle at 50% 60%,
+    rgba(149, 71, 165, 0.35) 0%,
+    rgba(149, 71, 165, 0.1) 45%,
+    rgba(0, 0, 0, 0.9) 85%,
+    #000000 100%
+  );
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+
+  header {
+    text-align: center;
+    justify-content: center;
+    padding: 104px 32px 67px 32px;
+  }
+
+  .monthly-title {
+    gap: 12px;
+    align-items: center;
+  }
+
+  .star {
+    width: 20px;
+    height: 20px;
+    color: var(--pink-base);
+    filter: drop-shadow(0px 0px 12px rgba(149, 71, 165, 0.8));
+  }
+
+  h1 {
+    font: var(--title-sm);
+  }
+
+  p {
+    font: var(--body-md);
+  }
+
+  .demonstrative {
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    display: block;
+    aspect-ratio: 1 / 1.2;
+
+    p {
+      font-size: var(--fs-tag);
+      font-weight: var(--weigth-regular);
+    }
+  }
+
+  .book-castle-hill {
+    width: 196.49px;
+    height: 259.6px;
+    transform: translateX(-50%);
+    left: 43%;
+    top: 10%;
+  }
+
+  .bookmark-1 {
+    width: 139.6px;
+    height: 100%;
+    aspect-ratio: 135 / 202;
+    left: 55%;
+    bottom: 20%;
+    z-index: -1;
+  }
+
+  .bookmark-2 {
+    width: 139.6px;
+    height: 100%;
+    left: 66%;
+    bottom: 7%;
+    z-index: -2;
+    transform: rotate(2deg);
+    transform-origin: center;
+  }
+
+  .brooches {
+    width: 93.61px;
+    height: 106.75px;
+    right: 73%;
+    top: 52%;
+    z-index: -1;
+  }
+
+  .arrow-top {
+    width: 73.43px;
+    height: 12.63px;
+    fill: var(--pink-dark);
+    right: 77.5%;
+    top: 9%;
+    z-index: -1;
+  }
+
+  .arrow-left {
+    width: 44.11px;
+    height: 53.44px;
+    fill: var(--pink-dark);
+    right: 90%;
+    top: 46%;
+    z-index: -1;
+  }
+
+  .arrow-bottom {
+    width: 61.2px;
+    height: 63.74px;
+    fill: var(--pink-dark);
+    right: 12%;
+    top: 62%;
+    z-index: -3;
+  }
+
+  .demonstrative p:nth-child(1) {
+    right: 77%;
+    top: 3%;
+  }
+
+  .demonstrative p:nth-child(2) {
+    right: 79.8%;
+    top: 40%;
+  }
+
+  .demonstrative p:nth-child(3) {
+    right: 13%;
+    top: 79%;
+  }
+}
+
+@media (width >= 80em) {
+  .monthly-kit {
+    background-image: radial-gradient(
+      circle at 50% 40%,
+      rgba(149, 71, 165, 0.35) 0%,
+      rgba(149, 71, 165, 0.05) 30%,
+      #000000 60%,
+      #000000 100%
+    );
+
+    header {
+      padding: 235px 508px 88px 508px;
+    }
+
+    .monthly-title {
+      gap: 16px;
+    }
+
+    .star {
+      width: 32px;
+      height: 32px;
+    }
+
+    .demonstrative {
+      max-width: 1440px;
+
+      p {
+        font: var(--body-md);
+      }
+    }
+
+    .book-castle-hill {
+      width: 467px;
+      height: 617px;
+      left: 49%;
+    }
+
+    .bookmark-1 {
+      width: 329.6px;
+      left: 56.5%;
+      bottom: 29%;
+    }
+
+    .bookmark-2 {
+      width: 390px;
+      left: 62.7%;
+      bottom: 22%;
+      transform: rotate(1deg);
+      transform-origin: center;
+    }
+
+    .brooches {
+      width: 222px;
+      height: 254px;
+      left: 23.9%;
+      top: 36%;
+    }
+
+    .arrow-top {
+      width: 174.5px;
+      height: 30px;
+      right: 63.5%;
+      top: 9%;
+    }
+
+    .arrow-left {
+      width: 104.85px;
+      height: 127px;
+      right: 71.5%;
+      top: 32%;
+    }
+
+    .arrow-bottom {
+      width: 145.45px;
+      height: 151.5px;
+      right: 22%;
+      top: 42%;
+    }
+
+    .demonstrative p:nth-child(1) {
+      right: 70%;
+      top: 6.5%;
+    }
+
+    .demonstrative p:nth-child(2) {
+      right: 71.5%;
+      top: 29.5%;
+    }
+
+    .demonstrative p:nth-child(3) {
+      right: 25%;
+      top: 51.5%;
+    }
+  }
+}

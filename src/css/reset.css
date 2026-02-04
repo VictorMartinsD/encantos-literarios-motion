@@ -38,7 +38,8 @@ svg {
 }
 
 /* 5. Remove estilos de lista e links */
-ul, ol,
+ul,
+ol,
 ul[role="list"],
 ol[role="list"] {
   list-style: none;

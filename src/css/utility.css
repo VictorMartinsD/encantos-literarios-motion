@@ -33,6 +33,14 @@
   display: none;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
 @media (width >= 80em) {
   .mobile-only {
     display: none;
