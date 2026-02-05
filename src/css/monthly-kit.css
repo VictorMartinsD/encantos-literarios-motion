@@ -223,5 +223,59 @@
       right: 25%;
       top: 51.5%;
     }
+
+    .bookmark-1,
+    .bookmark-2,
+    .brooches,
+    .arrow-top,
+    .arrow-left,
+    .arrow-bottom,
+    .demonstrative p {
+      pointer-events: none;
+      transition: transform 0.4s ease-in-out;
+      z-index: -1;
+    }
+
+    .bookmark-1 {
+      transform: translate(-150px, 114px) rotate(-11.5deg);
+    }
+
+    .bookmark-2 {
+      transform: translate(-266px, -10px) rotate(-22deg);
+    }
+
+    .brooches {
+      transform: translate(140px, -90px);
+    }
+
+    .arrow-top,
+    .demonstrative p:nth-child(1) {
+      transform: translate(270px, 140px);
+    }
+    .arrow-left,
+    .demonstrative p:nth-child(2) {
+      transform: translate(250px, -170px);
+    }
+    .arrow-bottom,
+    .demonstrative p:nth-child(3) {
+      transform: translate(-230px, -200px);
+    }
+
+    .demonstrative:hover {
+      .bookmark-1,
+      .bookmark-2,
+      .brooches,
+      .arrow-top,
+      .arrow-left,
+      .arrow-bottom,
+      p {
+        transform: translate(0, 0);
+        transition: transform 0.9s cubic-bezier(0.3, 1.3, 0.3, 1);
+      }
+
+      .bookmark-2 {
+        transform: translate(0, 0) rotate(1deg);
+      }
+    }
   }
 }
