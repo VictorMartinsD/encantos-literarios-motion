@@ -41,6 +41,19 @@
   position: relative;
 }
 
+.gap-8 {
+  gap: 8px;
+  align-items: center;
+}
+
+.gap-12 {
+  gap: 12px;
+}
+
+.gap-16 {
+  gap: 16px;
+}
+
 @media (width >= 80em) {
   .mobile-only {
     display: none;
