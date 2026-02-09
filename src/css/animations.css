@@ -6,3 +6,27 @@
     opacity: 1;
   }
 }
+
+/* Card Expansion Animations - Layout Desktop */
+@keyframes spreadMonthly {
+  from {
+    margin-right: -340px;
+    transform: rotate(0deg) translateX(-34px);
+  }
+  to {
+    margin-right: 0;
+    transform: rotate(-8deg) translateX(7px) translateY(70px);
+  }
+}
+
+@keyframes spreadAnnual {
+  from {
+    margin-left: -340px;
+    transform: rotate(0deg) translateX(34px);
+  }
+
+  to {
+    margin-left: 0;
+    transform: rotate(8deg) translateX(-7px) translateY(70px);
+  }
+}

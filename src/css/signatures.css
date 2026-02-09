@@ -168,5 +168,109 @@
       display: flex;
       justify-content: center;
     }
+
+    /* Controla a animação de 'fan-out' (espalhar) dos cards de planos.
+      A classe .is-active é disparada via JS no primeiro hover da seção.
+    */
+    .monthly-price,
+    .annual-price {
+      z-index: 0;
+      margin: 0;
+
+      animation-duration: 0.8s;
+      animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+      animation-fill-mode: forwards;
+
+      transition:
+        background-color 0.5s ease,
+        translate 0.5s ease,
+        box-shadow 0.5s ease;
+    }
+
+    .monthly-price {
+      transform: rotate(-8deg) translateX(7px) translateY(70px);
+      margin: 0;
+      opacity: 1;
+    }
+
+    .annual-price {
+      transform: rotate(8deg) translateX(-7px) translateY(70px);
+      margin: 0;
+      opacity: 1;
+    }
+
+    .option-signatures:not(.is-active) .monthly-price {
+      margin-right: -340px;
+      transform: rotate(0deg) translateX(-34px) translateY(0);
+      transition:
+        transform 0.6s ease,
+        margin 0.6s ease;
+    }
+
+    .option-signatures:not(.is-active) .annual-price {
+      margin-left: -340px;
+      transform: rotate(0deg) translateX(34px) translateY(0);
+      transition:
+        transform 0.6s ease,
+        margin 0.6s ease;
+    }
+
+    .option-signatures.is-active .monthly-price {
+      animation: spreadMonthly 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+
+    .option-signatures.is-active .annual-price {
+      animation: spreadAnnual 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+
+    .semi-annual-price {
+      z-index: 2;
+      background-color: var(--shape-hover) !important;
+      transition:
+        background-color 0.3s ease,
+        translate 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .option-signatures.is-active .monthly-price,
+    .option-signatures.is-active .semi-annual-price,
+    .option-signatures.is-active .annual-price {
+      background-color: var(--shape-base) !important;
+    }
+
+    .option-signatures .monthly-price:hover,
+    .option-signatures .semi-annual-price:hover,
+    .option-signatures .annual-price:hover {
+      background-color: var(--shape-hover) !important;
+      z-index: 10 !important;
+      translate: 0 -10px;
+      box-shadow: 0 0 66px 0 rgba(53, 139, 185, 0.1);
+    }
+
+    /* Mantém o destaque no plano central (Semestral) apenas quando
+      nenhum outro card estiver em foco (hover).
+    */
+    .option-signatures.is-active:not(:has(> div:hover)) .semi-annual-price {
+      background-color: var(--shape-hover) !important;
+    }
+
+    .monthly-price .star-lg-1,
+    .monthly-price .star-sm-1,
+    .annual-price .star-lg-2,
+    .annual-price .star-sm-2 {
+      transition: transform 0.5s ease;
+    }
+    .monthly-price:hover .star-lg-1 {
+      transform: rotate(-15deg);
+    }
+    .monthly-price:hover .star-sm-1 {
+      transform: rotate(15deg);
+    }
+    .annual-price:hover .star-lg-2 {
+      transform: rotate(15deg);
+    }
+    .annual-price:hover .star-sm-2 {
+      transform: rotate(-15deg);
+    }
   }
 }
