@@ -51,7 +51,7 @@
   --body-sm: var(--weight-regular) var(--fs-body-sm)/var(--lh-body) var(--font-family);
   --body-xs: var(--weight-regular) var(--fs-body-xs)/var(--lh-body) var(--font-family);
   --button: var(--weight-bold) var(--fs-button)/normal var(--font-family);
-  --link: var(--weight-medium) var(--fs-link)/normal var(--font-family);
+  --link: var(--weight-medium) var(--fs-link)/2 var(--font-family);
   --tag: var(--weight-bold) var(--fs-tag)/normal var(--font-family);
 }
 

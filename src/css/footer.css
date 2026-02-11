@@ -1,0 +1,114 @@
+footer {
+  background-image: url(../../assets/img/bg-footer-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 98px 32px 38px 32px;
+
+  header {
+    justify-items: center;
+  }
+
+  svg {
+    width: 158.62px;
+    height: 40px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--shape-stroke);
+    width: 311px;
+  }
+
+  .social-media {
+    justify-content: space-around;
+    width: 311px;
+    margin-bottom: 40px;
+  }
+
+  .instagram,
+  .twitter,
+  .facebook,
+  .discord,
+  .whatsapp,
+  .mail {
+    fill: var(--blue-base);
+    border-radius: 9999px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    transition:
+      background-color 0.3s,
+      fill 0.3s;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+
+  .instagram:hover,
+  .twitter:hover,
+  .facebook:hover,
+  .discord:hover,
+  .whatsapp:hover,
+  .mail:hover {
+    fill: var(--text-body);
+    background-color: var(--shape-stroke);
+  }
+
+  .navigation {
+    gap: 24px;
+    align-items: center;
+    margin-inline: 32px;
+  }
+
+  h3 {
+    margin-bottom: 20px;
+    font: var(--title-sx);
+    font-weight: bold;
+  }
+
+  a {
+    color: var(--blue-light);
+    font: var(--link);
+    transition:
+      color 0.5s,
+      fill 0.5s;
+  }
+
+  a:hover {
+    color: var(--text-body);
+    transition:
+      color 0.5s,
+      fill 0.5s;
+  }
+}
+
+@media (width >= 80em) {
+  footer {
+    background-image: url(../../assets/img/bg-footer-desktop.svg);
+    background-position: initial;
+    padding: 170px 160px 102px 160px;
+
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+
+    svg {
+      width: 264px;
+      height: 66.57px;
+    }
+
+    hr {
+      width: 264px;
+    }
+
+    .social-media {
+      width: 264px;
+      margin-bottom: 0;
+    }
+
+    .navigation {
+      gap: 56px;
+      margin-inline: 0;
+    }
+  }
+}

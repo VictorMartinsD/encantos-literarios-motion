@@ -159,6 +159,16 @@
   .signatures {
     padding: 0 0 184px 0;
 
+    .bg-blur {
+      top: 50%;
+      width: 1200px;
+      height: 600px;
+
+      background: radial-gradient(ellipse, rgba(0, 15, 31, 1) 0%, rgba(0, 15, 31, 0.7) 40%, transparent 75%);
+
+      filter: blur(120px);
+    }
+
     h1:nth-child(1) {
       max-width: 300px;
       margin-bottom: 138px;
